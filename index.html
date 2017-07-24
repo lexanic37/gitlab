@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>OnePageScroll</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Описание">
+    <meta name="author" content="Хайдин Алексей">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="fullpage/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+       <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <style>
+        .homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+    </style>
+    <script>
+        $( document ).ready(function() {
+
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+function scaleVideoContainer() {
+
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    // console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
+    </script>
+
+
+  </head>
+
+  <body>
+
+
+
+      <!-- Начало кода -->
+    <ul id="mainMenu">
+        <li class="menu__li" data-menuanchor="onePage" class="active"><a class="menu__a" href="#onePage">О нас</a></li>
+        <li class="menu__li" data-menuanchor="twoPage"><a class="menu__a" href="#twoPage">Примеры</a></li>
+        <li class="menu__li" data-menuanchor="threePage"><a class="menu__a" href="#threePage">Third section</a></li>
+        <li class="menu__li" data-menuanchor="forPage"><a class="menu__a" href="#forPage">Fourth section</a></li>
+        <li class="menu__li" data-menuanchor="fifthPage"><a class="menu__a" href="#fifthPage">Fourth section</a></li>
+    </ul>
+
+    <div id="fullpage">
+        <div class="section page1" >
+            <div class="page1_blackbackground">
+                <h1>FIGHT MAFIA</h1>
+                <h2>В ТЕЙКОВЕ</h2>
+                <h2>ТРЕННИРОВКИ ПО ММА И ГРЕПЛИНГУ</h2>
+            </div>
+
+        </div>
+        <div class="section page2" >
+            <div class="conteiner">
+            <div class="halfteam">
+                <img class ="team" src="images/section2img.jpg">
+            </div>
+
+            <div class="halfteam2">
+                <div class="about">
+                   <p class="title2">О НАШЕМ КЛУБЕ</p>
+                   <p class="descript">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="section page3">
+            <div class="conteiner2">
+                <div class="half flex">
+                       <p class="title2 news">НАШ ТРЕНЕР</p>
+                       <p class="descript news"> КМС по рукопашному бою, чемпион Ивановской области по ММА, участник профессиональных турниров по ММА Андрей Курбатов. Так же привлекаются члены сборной области для мастер-классов.
+Тренировки проходят по адресу площадь Ленина д.1, вход с торца,второй этаж.</p>
+                       <div class="sym"><a href="https://www.instagram.com/andrey_kurbatov_mma/"><i class="fa fa-instagram fa-5x"> </i></a><a href="https://vk.com/kot_lito"><i class="fa fa-vk fa-5x"></i></a></div>
+                </div>
+                <div class="half">
+                    <p class="title2 new">АНДРЕЙ КУРБАТОВ</p>
+                    <img class="team" src="images/section3.jpg">
+                </div>
+
+            </div>
+        </div>
+        <div class="section page4">
+
+
+
+
+
+            <div class="homepage-hero-module">
+
+    <div class="video-container">
+
+        <div class="filter">
+            <div class="table_container">
+
+
+
+            <table>
+                <thead>
+                   <tr>
+                       <th>ГРУППА</th>
+                       <th>ВТ</th>
+                       <th>ЧТ</th>
+                       <th>СБ</th>
+                   </tr>
+
+
+                </thead>
+                <tbody>
+                <tr>
+                   <th>МЛАДШАЯ</th>
+                   <th>19.00<br>-<br>20.00</th>
+                    <th>19.00<br>-<br>20.00</th>
+                    <th>14.00<br>-<br>15.00</th>
+                </tr>
+                <tr>
+                    <th>СТАРШАЯ</th>
+                    <th>20.00<br>-<br>22.00</th>
+                    <th>20.00<br>-<br>22.00</th>
+                    <th>15.00<br>-<br>17.00</th>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        </div>
+
+        <video  muted autoplay loop class="fillWidth">
+            <source data-src="images/mma.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <source data-src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>
+
+    </div>
+</div>
+
+        </div>
+        <div class="section page5">
+            <iframe class="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d915.8051707701933!2d40.5348646735871!3d56.854614643177065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414d2021e6ed2077%3A0xaea5cb2ee38911b6!2z0L_Quy4g0JvQtdC90LjQvdCwLCAxLCDQotC10LnQutC-0LLQviwg0JjQstCw0L3QvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTU1MDQw!5e0!3m2!1sru!2sru!4v1500480150317" width="70%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="sales">
+                <h1>НАШИ ЦЕНЫ</h1>
+                <div class="sales_conteiner"><p class="type">1 ЗАНЯТИЕ</p><p class="cost">250<i class="fa fa-rub"></i></p></div>
+                <div class="sales_conteiner"><p class="type">МЕСЯЦ</p><p class="cost">1600<i class="fa fa-rub"></i></p></div>
+                <a class="writer">ЗАПИСАТЬСЯ</a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+        
+        
+        
+
+      <!-- Конец кода -->
+    <!-- Подключаем скрипты -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="fullpage/jquery.fullPage.min.js"></script>
+    <script src="js/js.js"></script>
+
+
+
+
+  </body>
+</html>a
