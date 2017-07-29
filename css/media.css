@@ -182,6 +182,9 @@
     table {
         display: none;
     }
+    .page4 p {
+        display: inline;
+    }
 
     .sales_conteiner {
         height: 13%;
@@ -205,13 +208,13 @@
 }
 @media (max-width: 350px){
     .button{
-        width: 275px;
+        width: 250px;
     }
     .buttonmap{
-        width: 275px;
+        width: 250px;
     }
     .buttoncost{
-        width: 275px;
+        width: 250px;
     }
 }
 
