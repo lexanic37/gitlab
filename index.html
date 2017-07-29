@@ -7,9 +7,19 @@
     <meta name="author" content="Хайдин Алексей">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="remodal/remodal.css">
+    <link rel="stylesheet" href="remodal/remodal-default-theme.css">
     <link rel="stylesheet" href="fullpage/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/buttonmap.css">
+    <link rel="stylesheet" href="css/buttoncost.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/media.css">
+
+
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <style>
@@ -125,16 +135,14 @@ function scaleBannerVideoSize(element){
   </head>
 
   <body>
-
-
-
-      <!-- Начало кода -->
+  <!-- Начало кода -->
+  <div class="remodal-bg">
     <ul id="mainMenu">
-        <li class="menu__li" data-menuanchor="onePage" class="active"><a class="menu__a" href="#onePage">О нас</a></li>
-        <li class="menu__li" data-menuanchor="twoPage"><a class="menu__a" href="#twoPage">Примеры</a></li>
-        <li class="menu__li" data-menuanchor="threePage"><a class="menu__a" href="#threePage">Third section</a></li>
-        <li class="menu__li" data-menuanchor="forPage"><a class="menu__a" href="#forPage">Fourth section</a></li>
-        <li class="menu__li" data-menuanchor="fifthPage"><a class="menu__a" href="#fifthPage">Fourth section</a></li>
+        <li class="menu__li" data-menuanchor="onePage" class="active"><a class="menu__a" href="#onePage">ГЛАВНАЯ</a></li>
+        <li class="menu__li" data-menuanchor="twoPage"><a class="menu__a" href="#twoPage">О НАС</a></li>
+        <li class="menu__li" data-menuanchor="threePage"><a class="menu__a" href="#threePage">ТРЕНЕР</a></li>
+        <li class="menu__li" data-menuanchor="forPage"><a class="menu__a" href="#forPage">РАСПИСАНИЕ</a></li>
+        <li class="menu__li" data-menuanchor="fifthPage"><a class="menu__a" href="#fifthPage">ГДЕ?</a></li>
     </ul>
 
     <div id="fullpage">
@@ -155,7 +163,7 @@ function scaleBannerVideoSize(element){
             <div class="halfteam2">
                 <div class="about">
                    <p class="title2">О НАШЕМ КЛУБЕ</p>
-                   <p class="descript">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                   <p class="descript">В наши тренировки входят теоретические и практические занятия по борьбе и ударной технике. В тренировку входят упражнения на растяжку, силу, равновесие, выносливость. Упражнения сбалансированны и опробованны в лучших школах мира.Наши бойцы участники и призеры многочисленных професиональных и любительских турниров по боевым и игровым видам спорта. Так же привлекаются члены сборной области для мастер-классов.</p>
                 </div>
             </div>
             </div>
@@ -164,9 +172,9 @@ function scaleBannerVideoSize(element){
             <div class="conteiner2">
                 <div class="half flex">
                        <p class="title2 news">НАШ ТРЕНЕР</p>
-                       <p class="descript news"> КМС по рукопашному бою, чемпион Ивановской области по ММА, участник профессиональных турниров по ММА Андрей Курбатов. Так же привлекаются члены сборной области для мастер-классов.
-Тренировки проходят по адресу площадь Ленина д.1, вход с торца,второй этаж.</p>
-                       <div class="sym"><a href="https://www.instagram.com/andrey_kurbatov_mma/"><i class="fa fa-instagram fa-5x"> </i></a><a href="https://vk.com/kot_lito"><i class="fa fa-vk fa-5x"></i></a></div>
+                        <p class="llw"><img class="low_screen" alt="" src="images/section3.jpg"></p>
+                       <p class="descript news"> <span class="descriptllw">АНДРЕЙ КУРБАТОВ</span> - КМС по рукопашному бою, чемпион Ивановской области по ММА, участник профессиональных турниров по ММА Андрей Курбатов.</p>
+                       <div class="sym"><a href="https://www.instagram.com/andrey_kurbatov_mma/"><i class="fa fa-instagram"> </i></a><a href="https://vk.com/kot_lito"><i class="fa fa-vk"></i></a></div>
                 </div>
                 <div class="half">
                     <p class="title2 new">АНДРЕЙ КУРБАТОВ</p>
@@ -183,9 +191,11 @@ function scaleBannerVideoSize(element){
 
             <div class="homepage-hero-module">
 
-    <div class="video-container">
+    <div class="video-container" >
 
         <div class="filter">
+            <h1 >РАСПИСАНИЕ</h1>
+            <p style="font-size:15px; font-family:ManiaExtendedC; color:#ffffff; text-align:center;">вторник,четверг.<br>Младшая группа (7-14 лет)<br> в 19-00. Старшая группа в 20-00.<br> Суббота -мл.группа в 14.00, <br>старшая в 15.00.</p>
             <div class="table_container">
 
 
@@ -220,7 +230,7 @@ function scaleBannerVideoSize(element){
         </div>
         </div>
 
-        <video  muted autoplay loop class="fillWidth">
+        <video  muted autoplay loop class="fillWidth" >
             <source data-src="images/mma.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
             <source data-src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
@@ -232,34 +242,65 @@ function scaleBannerVideoSize(element){
         <div class="section page5">
             <iframe class="map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d915.8051707701933!2d40.5348646735871!3d56.854614643177065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414d2021e6ed2077%3A0xaea5cb2ee38911b6!2z0L_Quy4g0JvQtdC90LjQvdCwLCAxLCDQotC10LnQutC-0LLQviwg0JjQstCw0L3QvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTU1MDQw!5e0!3m2!1sru!2sru!4v1500480150317" width="70%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             <div class="sales">
-                <h1>НАШИ ЦЕНЫ</h1>
+                <h1 id="ff">НАШИ ЦЕНЫ</h1>
                 <div class="sales_conteiner"><p class="type">1 ЗАНЯТИЕ</p><p class="cost">250<i class="fa fa-rub"></i></p></div>
                 <div class="sales_conteiner"><p class="type">МЕСЯЦ</p><p class="cost">1600<i class="fa fa-rub"></i></p></div>
-                <a class="writer">ЗАПИСАТЬСЯ</a>
+                <a class="buttoncost" href="#modal_cost" role="button">
+                    <span>ЦЕНЫ</span>
+                    <div class="icon">
+                         <i class="fa fa-money"></i>
+                        <i class="fa fa-rub"></i>
+                    </div>
+                </a>
+                <div class="remodal" data-remodal-id="modal_cost">
+                      <button data-remodal-action="close" class="remodal-close"></button>
+                        <h1 style="color: #081f34; font-size: 30px;">ЦЕНЫ</h1>
+                    <p>МЕСЯЦ-1600Р</p>
+                    <p>РАЗВОЕ ЗАНЯТИЕ-250Р</p>
 
+                            <br>
+                      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+                    </div>
+                <a class="buttonmap" href="#modal_map" role="button">
+                    <span>НА КАРТЕ</span>
+                    <div class="icon">
+                         <i class="fa fa-map "></i>
+                        <i class="fa fa-map-marker "></i>
+                    </div>
+                </a>
+                <div class="remodal" data-remodal-id="modal_map">
+                      <button data-remodal-action="close" class="remodal-close"></button>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2181.4868774346673!2d40.53251131597364!3d56.854744980862435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414d2021e6ed2077%3A0xaea5cb2ee38911b6!2z0L_Quy4g0JvQtdC90LjQvdCwLCAxLCDQotC10LnQutC-0LLQviwg0JjQstCw0L3QvtCy0YHQutCw0Y8g0L7QsdC7LiwgMTU1MDQw!5e0!3m2!1sru!2sru!4v1501361782521" width="90%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <br>
+                      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+                    </div>
+                <a class="button" data-remodal-target="modal" href="#modal" role="button">
+                    <span>В БОЙ</span>
+                    <div class="icon">
+                         <i class="fa  fa-hand-rock-o "></i>
+                        <i class="fa fa-check "></i>
+                    </div>
+                </a>
+                <div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: false">
+                      <button data-remodal-action="close" class="remodal-close"></button>
+                        <h1 style="color: #081f34; font-size: 30px;">ЗАПИСЬ</h1>
+                            <p>
+                                <a style="color: #081f34;text-decoration: none" href="tel:+79203755543"> +79203755543</a>
+                                <br>
+                                <a style="color: #081f34;text-decoration: none" href="https://vk.com/mma_teikovo">В группе ВК</a>
+                            </p>
+                            <br>
+                      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+                    </div>
             </div>
-
         </div>
-
-
-
-
-
     </div>
-
-
-        
-        
-        
-
       <!-- Конец кода -->
     <!-- Подключаем скрипты -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script src="remodal/remodal.min.js"></script>
     <script src="fullpage/jquery.fullPage.min.js"></script>
     <script src="js/js.js"></script>
-
-
-
-
+  </div>
   </body>
 </html>a

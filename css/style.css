@@ -5,6 +5,7 @@ body {
     font: 1em/1.6em sans-serif;
     color: #353535;
     background-color: gray;
+    font-family: ManiaExtendedC;
 }
 h1{
     font-size: 60px;
@@ -20,7 +21,18 @@ p{
     text-align: center;
 }
 
-
+.low_screen{
+    display: none;
+}
+.descriptllw{
+    display: none;
+}
+.buttonmap{
+    display: none;
+}
+.buttoncost{
+    display: none;
+}
 
 /*! Стили меню */
 #mainMenu {
@@ -75,17 +87,21 @@ p{
 .page1 {
     background-image: url(../images/main.jpg);
     background-position: center;
+    background-size: cover;
 }
 .page1_blackbackground{
     width: 100%;
     height: 40%;
     background-color: rgba(227,0,14, 0.43);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
 }
 .page1_blackbackground h1, h2 {
     color: #ffffff;
     text-align: center;
-    padding-top: 50px;
     font-family: ManiaExtendedC;
     line-height: normal;
 
@@ -93,16 +109,17 @@ p{
 .page1_blackbackground h2{
 
     line-height: normal;
-    padding-top: 20px;
+
 
 }
 .page2 {
     background-color: #ffffff;
 }
 .team {
-    max-width:100%;
+    max-width:70%;
     height:auto;
     border: none;
+    margin-left: 70px;
 
 
 
@@ -112,8 +129,10 @@ p{
     margin: 40px;
     display: flex;
     width: 400px;
-    flex-basis: 50%;
     flex-direction: column;
+    max-height: 100%;
+    flex-basis: 50%;
+
 
 
 
@@ -149,6 +168,7 @@ p{
     justify-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
+    max-height: 100%;
 }
 
 
@@ -190,9 +210,16 @@ p{
     padding-left: 15%;
     padding-right: 10%;
 }
-i{
+.sym{
+    font-size: 75px;
     color: #e3000e;
     margin: 0 10px;
+    text-decoration: none;
+}
+.sym i {
+    margin: 0 10px;
+    color: #e3000e;
+
 }
 /* 4 Секция*/
 .page4{
@@ -200,6 +227,12 @@ i{
     background-position: center;
     background: none;
 
+}
+.filter h1{
+    font-size: 60px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 80px;
 }
 
 table{
@@ -302,16 +335,22 @@ th{
     height: 20%;
     border: 3px solid #081f34;
     border-radius: 10px;
-
+    line-height: normal;
     margin-top: 20px;
     margin-bottom: 15px;
     margin-left: 40px;
     margin-right: 40px;
     padding: 40px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
 
 }
 .writer{
+    display: block;
     padding: 40px 40px;
     text-decoration: none;
     color: #ffffff;
@@ -319,26 +358,36 @@ th{
     font-size: 30px;
     font-family: ManiaExtendedC;
     border-radius: 10px;
-    margin-bottom: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 80px;
+
 
 }
 .sales h1{
     font-size: 48px;
     font-family: ManiaExtendedC;
     color: #e3000e;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 10px;
+    line-height: normal;
 }
 .cost {
     color: #e3000e;
     font-family: ManiaExtendedC;
     font-size: 60px;
+    margin-top: 30px;
+    white-space: nowrap;
+    margin-bottom: 30px;
 }
 .type{
     color: #e3000e;
     font-family: ManiaExtendedC;
     font-size: 30px;
+    white-space: nowrap;
 }
+/*half flex врованятьс строки flex-basis 30%*/
+
 
 
 
