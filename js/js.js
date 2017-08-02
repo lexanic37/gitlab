@@ -1,5 +1,7 @@
 $('#fullpage').fullpage({anchors:['onePage', 'twoPage', 'threePage', 'forPage', 'fifthPage'],
-menu: '#mainMenu'});
+  animateAnchor: false,
+  scrollBar:true,
+   menu: '#mainMenu'});
 (function() {
   var removeSuccess;
 
@@ -45,3 +47,11 @@ menu: '#mainMenu'});
   });
 
 }).call(this);
+$(document).ready(function() {
+$('#fullpage').fullpage({
+scrollBar: true,
+afterRender: function(){
+new WOW().init();
+}
+});
+});

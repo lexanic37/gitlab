@@ -2,7 +2,7 @@
 
 @font-face {
 
-    font-family: Scriptorama; /* имя шрифта для CSS правил */
+    font-family: ManiaExtendedC; /* имя шрифта для CSS правил */
 
     src: local("ManiaExtendedC"), /* проверяем наличие шрифта в ОС пользователя */
 
@@ -14,6 +14,7 @@ body {
     color: #353535;
     background-color: gray;
     font-family: ManiaExtendedC;
+    overflow: hidden;
 }
 h1{
     font-size: 60px;
@@ -44,6 +45,13 @@ p{
 }
 .page4 p {
     display: none;
+}
+.table_container{
+    display: none;
+}
+.chtable{display:none; font-size:15px; font-family:ManiaExtendedC; color:#ffffff; text-align:center;}
+.section.page4{
+    text-align: start;
 }
 
 /*! Стили меню */
@@ -323,9 +331,7 @@ th{
 .video-container video.fillWidth {
     width: 100%;
 }
-.section.page4{
-    text-align: start;
-}
+
 .page5{
     background-color: #ffffff;
 }
@@ -392,11 +398,21 @@ th{
     white-space: nowrap;
     margin-bottom: 30px;
 }
-.type{
+.type {
     color: #e3000e;
     font-family: ManiaExtendedC;
     font-size: 30px;
     white-space: nowrap;
+}
+.title2.news{
+    flex-basis: 33%;
+    margin-bottom: 0%;
+}
+.descript.news{
+    flex-basis: 33%;
+}
+.sym{
+    flex-basis: 33%;
 }
 /*half flex врованятьс строки flex-basis 30%*/
 
