@@ -177,9 +177,6 @@
     }
     #author{
         float:none;
-        right:50%;
-        margin-right: -145px;
-
         white-space:nowrap;
 
     }
@@ -222,7 +219,7 @@
         top:50%;
         left:50%;
         margin-top: -125px;
-        margin-left: -97px;
+        margin-left: -87px;
 
     }
 }
