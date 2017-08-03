@@ -4,9 +4,7 @@
 
     font-family: ManiaExtendedC; /* имя шрифта для CSS правил */
 
-    src: local("ManiaExtendedC"), /* проверяем наличие шрифта в ОС пользователя */
-
-         url(../ManiaExtendedc.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+        src: url(../fonts/ManiaExtendedc.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
 
   }
 body {
@@ -413,6 +411,9 @@ th{
 }
 .sym{
     flex-basis: 33%;
+}
+#author{
+    position:absolute; right: 10px; margin-top: 10px; z-index:999
 }
 /*half flex врованятьс строки flex-basis 30%*/
 

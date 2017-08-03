@@ -172,12 +172,20 @@
     .buttonmap span{
         font-size: 20px;
     }
-
-}
-@media (max-width: 500px) {
     #mainMenu {
         display: none;
     }
+    #author{
+        float:none;
+        right:50%;
+        margin-right: -142px;
+        white-space:nowrap;
+
+    }
+
+}
+@media (max-width: 500px) {
+
 
     table {
         display: none;
@@ -213,7 +221,7 @@
         top:50%;
         left:50%;
         margin-top: -125px;
-        margin-left: -87px;
+        margin-left: -97px;
 
     }
 }

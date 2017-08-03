@@ -1,6 +1,8 @@
 $('#fullpage').fullpage({anchors:['onePage', 'twoPage', 'threePage', 'forPage', 'fifthPage'],
   animateAnchor: false,
   scrollBar:true,
+  lazyLoading: true,
+
   menu: '#mainMenu'});
 (function() {
   var removeSuccess;

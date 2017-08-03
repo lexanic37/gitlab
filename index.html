@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
   <head>
-    <title>OnePageScroll</title>
+    <title>Fight Mafia</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Описание">
+    <meta name="description" content="Секция MMA в тейково.">
+    <meta http-equiv="content-language" content="ru">
+    <meta name="robots" content="index,follow">
     <meta name="author" content="Хайдин Алексей">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Тейково,мма,mma,спорт,бои">
     <link rel="stylesheet" href="remodal/remodal.css">
     <link rel="stylesheet" href="remodal/remodal-default-theme.css">
     <link rel="stylesheet" href="fullpage/jquery.fullPage.css">
@@ -18,7 +21,9 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animate.css">
+      <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
     <style>
         .homepage-hero-module {
     border-right: none;
@@ -122,7 +127,7 @@ function scaleBannerVideoSize(element){
             $(this).width(videoWidth).height(videoHeight);
         }
 
-        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
 
     });
 }
@@ -141,7 +146,7 @@ function scaleBannerVideoSize(element){
         <li class="menu__li" data-menuanchor="forPage"><a class="menu__a" href="#forPage">РАСПИСАНИЕ</a></li>
         <li class="menu__li" data-menuanchor="fifthPage"><a class="menu__a" href="#fifthPage">ГДЕ?</a></li>
 
-    </ul><ul style="position:absolute; right: 10px; margin-top: 10px; z-index:999">
+    </ul><ul id="author">
        <li  class="menu__li newss" ><a style="background-color:#081f34; color: #ffffff;" class="menu__a" href="https://vk.com/club149433558">Сайт создал: WEB-волонтер</a></li>
      </ul>
     <div id="fullpage">
@@ -149,7 +154,7 @@ function scaleBannerVideoSize(element){
             <div class="page1_blackbackground bounceInDown wow" data-wow-duration="0.7s" data-wow-delay="0.2s">
                 <h1>FIGHT MAFIA</h1>
                 <h2>В ТЕЙКОВЕ</h2>
-                <h2>ТРЕННИРОВКИ ПО ММА И ГРЕПЛИНГУ</h2>
+                <h2>ТРЕНИРОВКИ ПО ММА И ГРЕПЛИНГУ</h2>
             </div>
 
         </div>
@@ -172,7 +177,7 @@ function scaleBannerVideoSize(element){
                 <div class="half flex">
                        <p class="title2 news bounceInLeft wow" data-wow-duration="0.7s" data-wow-delay="0.2s">НАШ ТРЕНЕР</p>
                         <p class="llw"><img class="low_screen" alt="" src="images/section3.jpg"></p>
-                       <p class="descript news bounceInLeft wow" data-wow-delay="0.5s" data-wow-duration="0.7s"> <span class="descriptllw">АНДРЕЙ КУРБАТОВ</span> - КМС по рукопашному бою, чемпион Ивановской области по ММА, участник профессиональных турниров по ММА Андрей Курбатов.</p>
+                       <p class="descript news bounceInLeft wow" data-wow-delay="0.5s" data-wow-duration="0.7s"> <span class="descriptllw">АНДРЕЙ КУРБАТОВ</span> - КМС по рукопашному бою, чемпион Ивановской области по ММА, участник профессиональных турниров по ММА, тренерский стаж более 3-х лет.</p>
                        <div class="sym bounceInLeft wow" data-wow-delay="0.8s" data-wow-duration="0.7s"><a href="https://www.instagram.com/andrey_kurbatov_mma/"><i class="fa fa-instagram"> </i></a><a href="https://vk.com/kot_lito"><i class="fa fa-vk"></i></a></div>
                 </div>
                 <div class="half">
@@ -229,7 +234,7 @@ function scaleBannerVideoSize(element){
         </div>
         </div>
 
-        <video  muted autoplay loop class="fillWidth" >
+        <video data-keepplaying muted data-autoplay id="myVideo" loop class="fillWidth" >
             <source data-src="images/mma.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
             <source data-src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
         </video>
@@ -244,7 +249,7 @@ function scaleBannerVideoSize(element){
                 <h1 class="bounceInLeft wow" data-wow-delay="0.2s" data-wow-duration="0.7s" id="ff">НАШИ ЦЕНЫ</h1>
                 <div class="sales_conteiner bounceInLeft wow" data-wow-delay="0.5s" data-wow-duration="0.7s"><p class="type">1 ЗАНЯТИЕ</p><p class="cost">250<i class="fa fa-rub"></i></p></div>
                 <div class="sales_conteiner bounceInLeft wow" data-wow-delay="0.8s" data-wow-duration="0.7s"><p class="type">МЕСЯЦ</p><p class="cost">1600<i class="fa fa-rub"></i></p></div>
-                <a class="buttoncost bounceInLeft wow" href="#modal_cost" role="button">
+                <a class="buttoncost bounceInLeft wow" data-wow-delay="0.3s" href="#modal_cost" role="button">
                     <span>ЦЕНЫ</span>
                     <div class="icon">
                          <i class="fa fa-money"></i>
@@ -260,7 +265,7 @@ function scaleBannerVideoSize(element){
                             <br>
                       <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
                     </div>
-                <a class="buttonmap bounceInLeft wow" href="#modal_map" role="button">
+                <a class="buttonmap bounceInLeft wow" data-wow-delay="0.7s" href="#modal_map" role="button">
                     <span>НА КАРТЕ</span>
                     <div class="icon">
                          <i class="fa fa-map "></i>
