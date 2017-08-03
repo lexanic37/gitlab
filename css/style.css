@@ -413,7 +413,7 @@ th{
     flex-basis: 33%;
 }
 #author{
-    width: 284px;;position:absolute; right: 10px; margin-top: 10px; z-index:999
+    width: 290px;position:absolute; right: 10px; margin-top: 10px; z-index:999
 }
 /*half flex врованятьс строки flex-basis 30%*/
 
